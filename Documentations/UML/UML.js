@@ -11,33 +11,34 @@ class AuthFinder {
 +findAuth(uid: string): User
 +verifyCredentials(uid: string, password: string): boolean
 }
-
 class User {
-+int Id_Users
-+String Email
-+String Password
-+String FullName
-+DateTime LastLoginAt
++int id
++String email
++String password
++String fullName
++DateTime lastLoginAt
+}
+class Guest {
++int id
++String username
++String twitch
++Video[] videos
 }
 class Playlist {
-+int Id_Playlists
-+String Name
-+String FilePath
++int id
++String name
++String filePath
 +Video[] videos
 +load() Promise
-+generateFile(type: string) Promise
-+getCurrentVideo() Video
-+getNextVideo(showTransition: boolean) Video
-+getPreviousVideo() Video
-+moveToNextVideo()
-+removeCurrentVideo() Promise
 }
 class Video {
-+int Id_Videos
-+String Title
-+String Path
-+int Duration
-+bool ShowInNext
++int id
++Guest guest
++String title
++String path
++int duration
++bool showInNext
++bool state
 +getInformation(path: string) Promise
 +getDuration(path: string) Promise
 +elapsedTime() Promise
@@ -45,18 +46,34 @@ class Video {
 +getDurationInMilliseconds() Promise
 }
 class Timeline {
-+int Id_Timelines
-+String Name
++int id
++String name
++Video[] videos
++generateFile(type: string) Promise
++getCurrentVideo() Video
++getNextVideo(showTransition: boolean) Video
++getPreviousVideo() Video
++moveToNextVideo()
++removeCurrentVideo() Promise
++getAllVideos() Video[]
+}
+class TimelineElements {
++int id
++Timeline timeline
++int elementId
++String elementType
++int orders
 }
 class Stream {
-+int Id_Streams
-+String Name
-+int Pid
-+String Status
-+DateTime StartTimestamp
-+DateTime EndTimestamp
-+String Parameters
++int id
++String name
++int pid
++String status
++DateTime startTimestamp
++DateTime endTimestamp
++String parameters
 +Provider[] providers
++Timeline timeline
 
 +getUptime() Promise
 +updateRunnerText() Promise
@@ -68,19 +85,18 @@ class Stream {
 +stopStream() Promise
 }
 class Provider {
-+int Id_Providers
-+String Name
-+String Type
-+String ClientId
-+String ClientSecret
-+String RefreshToken
-+String BroadcasterId
-+String AuthBearer
-+String StreamKey
-+bool OnPrimary
++int id
++String name
++String type
++String clientId
++String clientSecret
++String refreshToken
++String broadcasterId
++String authBearer
++String streamKey
++bool onPrimary
 +createProvider(Provider) Promise
 }
-
 class Twitch {
 -static instance: Twitch
 -tmi.Client client
@@ -91,7 +107,6 @@ class Twitch {
 -refreshTokenWhenExpired() Promise
 -BASE_URL_API: String
 }
-
 class Queue {
 -QueueItem[] queue
 -bool isEncoding
@@ -104,8 +119,8 @@ class Queue {
 -processQueue() Promise
 +static getInstance() Queue
 }
-
 class QueueItem {
+<<Interface>>
 +Video video
 +string startTimeCode
 +string endTimeCode
@@ -119,7 +134,6 @@ class VideoEncoder {
 +static encode(Video, string, string, string) Promise
 }
 
-
 AuthFinder <|-- User
 BaseModel <|-- User
 BaseModel <|-- Playlist
@@ -130,6 +144,7 @@ BaseModel <|-- Provider
 Provider <|-- Twitch
 BaseModel <|-- Queue
 BaseModel <|-- VideoEncoder
+BaseModel <|-- Guest
 Queue "1" -- "*" QueueItem
 QueueItem "1" -- "1" Video
 VideoEncoder -- Video
@@ -138,7 +153,9 @@ User "1" *-- "*" Playlist
 User "1" *-- "*" Stream
 User "1" -- "*" Timeline
 Playlist "1" *-- "*" Video
-Timeline "1" *-- "*" Video
-Timeline "1" *-- "*" Playlist
+Timeline "1" *-- "*" TimelineElements : contains
+TimelineElements "0..1" -- "0..1" Video : video
+TimelineElements "0..1" -- "0..1" Playlist : playlist
 Stream "1" o-- "*" Provider
 Stream "1" -- "1" Timeline
+Guest "*" -- "0..*" Video : videos
