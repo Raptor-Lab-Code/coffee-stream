@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27b0ceaf-6061-4cb0-8562-f3a7cdd339ae" name="Changes" comment="feat : separate backend to frontend">
-      <change afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/addNewGuests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/addProviders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentations/UML/UMLv3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/addQueueItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/authentification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentations/SequenceDiagram/addVideoGuest" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/addVideoGuest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentations/UML/UML.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/UML/UML.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentations/SequenceDiagram/ValidateVideoGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/validateVideoGuest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentations/SequenceDiagram/addPlaylist.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/addPlaylist.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +19,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "YannickPerret"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Raptor-Lab-Code/coffee-stream.git&quot;,
@@ -81,6 +86,7 @@
       <workItem from="1713960272010" duration="2628000" />
       <workItem from="1713964163309" duration="752000" />
       <workItem from="1714024045525" duration="3085000" />
+      <workItem from="1716297054324" duration="673000" />
     </task>
     <task id="LOCAL-00001" summary="chore : initial commit">
       <option name="closed" value="true" />
