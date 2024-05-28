@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27b0ceaf-6061-4cb0-8562-f3a7cdd339ae" name="Changes" comment="feat : separate backend to frontend">
-      <change afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/addQueueItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/authentification.js" afterDir="false" />
+    <list default="true" id="27b0ceaf-6061-4cb0-8562-f3a7cdd339ae" name="Changes" comment="chore : update time to expires oat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentations/SequenceDiagram/ValidateVideoGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/validateVideoGuest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentations/SequenceDiagram/addPlaylist.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/addPlaylist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentations/SequenceDiagram/addNewGuests.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/addNewGuests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentations/SequenceDiagram/addPlaylist.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/addPlaylist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentations/SequenceDiagram/addProviders.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/addProviders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentations/SequenceDiagram/addVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/addVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentations/SequenceDiagram/addVideoGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/addVideoGuest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentations/SequenceDiagram/authentification.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/authentification.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentations/SequenceDiagram/validateVideoGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Documentations/SequenceDiagram/validateVideoGuest.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +22,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "YannickPerret"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;YannickPerret&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Raptor-Lab-Code/coffee-stream.git&quot;,
@@ -40,22 +43,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;docs&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tchoune/Documents/dev/js/coffeeStream&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "docs",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "/Users/tchoune/Documents/dev/js/coffeeStream",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/Users/tchoune/Documents/dev/js/coffeeStream/backend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -87,6 +98,8 @@
       <workItem from="1713964163309" duration="752000" />
       <workItem from="1714024045525" duration="3085000" />
       <workItem from="1716297054324" duration="673000" />
+      <workItem from="1716927346602" duration="193000" />
+      <workItem from="1716927540993" duration="2424000" />
     </task>
     <task id="LOCAL-00001" summary="chore : initial commit">
       <option name="closed" value="true" />
